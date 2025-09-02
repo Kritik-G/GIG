@@ -1,170 +1,6 @@
 @extends('front.layouts.app')
 
 @section('content')
-    <style>
-        /* Container */
-        .container-max {
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-
-        /* Section padding */
-        .section-padding {
-            padding-top: 6rem;
-            padding-bottom: 6rem;
-        }
-
-        @media (max-width: 1024px) {
-            .section-padding {
-                padding-top: 4rem;
-                padding-bottom: 4rem;
-            }
-        }
-
-        /* Buttons */
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #2563eb;
-            color: #fff;
-            font-weight: 600;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background-color: #1e40af;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-        }
-
-        .btn-outline {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid #eff6ff;
-            color: #eff6ff;
-            font-weight: 600;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .btn-outline:hover {
-            background-color: #2563eb;
-        }
-
-        /* Fade-in animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Hero gradient */
-        .hero-gradient {
-            background: linear-gradient(to right, #1e3a8a, #4f46e5);
-        }
-
-        /* Featured service */
-        .featured-service {
-            border: 2px solid #3b82f6;
-        }
-
-        /* Animations */
-        @keyframes pulse-glow {
-
-            0%,
-            100% {
-                box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
-            }
-
-            50% {
-                box-shadow: 0 0 60px rgba(255, 255, 255, 0.4);
-            }
-        }
-
-        .animate-pulse-glow {
-            animation: pulse-glow 2s infinite;
-        }
-
-        @keyframes bounce-spin {
-
-            0%,
-            100% {
-                transform: translateY(0) rotate(0deg);
-            }
-
-            25% {
-                transform: translateY(-10px) rotate(15deg);
-            }
-
-            50% {
-                transform: translateY(-15px) rotate(-10deg);
-            }
-
-            75% {
-                transform: translateY(-10px) rotate(10deg);
-            }
-        }
-
-        .animate-bounce-spin {
-            animation: bounce-spin 2.5s infinite;
-        }
-
-        @keyframes pulse-text {
-
-            0%,
-            100% {
-                color: #ffffff;
-            }
-
-            50% {
-                color: #facc15;
-            }
-        }
-
-        .animate-pulse-text {
-            animation: pulse-text 2s infinite;
-        }
-
-        @keyframes pulse-slow {
-
-            0%,
-            100% {
-                transform: scale(1);
-                opacity: 0.1;
-            }
-
-            50% {
-                transform: scale(1.2);
-                opacity: 0.2;
-            }
-        }
-
-        .animate-pulse-slow {
-            animation: pulse-slow 6s infinite;
-        }
-
-        .featured-slider div {
-            display: none;
-        }
-
-        .featured-slider div:first-child {
-            display: block;
-        }
-    </style>
-
     <!-- Hero Section -->
     <section class="hero-gradient text-white overflow-hidden">
         <div class="container-max mx-auto py-24 relative z-10">
@@ -228,7 +64,7 @@
                                 </div>
                             </div>
                             <div class="flex flex-col sm:flex-row gap-4">
-                                <a href="{{ route('products.ams') }}" class="btn-primary relative group overflow-hidden">
+                                <a href="{{ route('services') }}" class="btn-primary relative group overflow-hidden">
                                     Learn More
                                 </a>
                                 <a href="{{ route('contact') }}" class="btn-outline">
@@ -244,6 +80,7 @@
                     class="absolute bottom-0 right-0 w-72 h-72 bg-blue-400 opacity-20 rounded-full blur-3xl animate-pulse-slow">
                 </div>
             </div>
+
 
             <!-- Other Services -->
             <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12">
@@ -264,16 +101,6 @@
                             'title' => 'IoT Integration',
                             'desc' => 'Connect devices and systems seamlessly.',
                         ],
-                        [
-                            'icon' => '💻',
-                            'title' => 'Custom Software Development',
-                            'desc' => 'Tailored solutions for your unique needs.',
-                        ],
-                        [
-                            'icon' => '📊',
-                            'title' => 'Data Analytics & AI',
-                            'desc' => 'Actionable insights powered by AI.',
-                        ],
                     ];
                 @endphp
                 @foreach ($otherServices as $service)
@@ -284,6 +111,13 @@
                         <p class="text-gray-600">{{ $service['desc'] }}</p>
                     </div>
                 @endforeach
+            </div>
+
+            <!-- View More Button -->
+            <div class="text-center mt-12 fade-in">
+                <a href="{{ route('services') }}" class="btn-primary px-8 py-4 text-lg">
+                    View More
+                </a>
             </div>
         </div>
     </section>

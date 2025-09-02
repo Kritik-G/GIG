@@ -7,11 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GIG</title>
 
+
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animations.css') }}">
+
     <!-- Tailwind CSS -->
     @vite('resources/css/app.css')
 
     <!-- Optional: favicon -->
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+
 </head>
 
 <body class="antialiased bg-gray-50 text-gray-900">
@@ -28,7 +33,7 @@
     </div>
 
     <!-- Footer (if you have one) -->
-    @includeIf('front.layouts.footer')
+    @include('front.layouts.footer')
 
     <!-- Scripts -->
     @vite('resources/js/app.js')

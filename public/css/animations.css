@@ -1,0 +1,99 @@
+/* ----------------------------
+   Fade-in animation
+---------------------------- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ----------------------------
+   Pulse Glow
+---------------------------- */
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 60px rgba(255, 255, 255, 0.4);
+    }
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 2s infinite;
+}
+
+/* ----------------------------
+   Bounce Spin
+---------------------------- */
+@keyframes bounce-spin {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-10px) rotate(15deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(-10deg);
+    }
+
+    75% {
+        transform: translateY(-10px) rotate(10deg);
+    }
+}
+
+.animate-bounce-spin {
+    animation: bounce-spin 2.5s infinite;
+}
+
+/* ----------------------------
+   Pulse Text
+---------------------------- */
+@keyframes pulse-text {
+
+    0%,
+    100% {
+        color: #ffffff;
+    }
+
+    50% {
+        color: #facc15;
+    }
+}
+
+.animate-pulse-text {
+    animation: pulse-text 2s infinite;
+}
+
+/* ----------------------------
+   Pulse Slow
+---------------------------- */
+@keyframes pulse-slow {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.2;
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 6s infinite;
+}

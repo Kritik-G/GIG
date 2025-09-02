@@ -36,13 +36,12 @@
                 <ul class="space-y-2">
                     <li><a href="{{ route('home') }}"
                             class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Home</a></li>
-                    <li><a href="#services"
+                    <li><a href="{{ route('services') }}"
                             class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Services</a></li>
-                    <li><a href="{{ route('products.ams') }}"
-                            class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Products</a></li>
                     <li><a href="{{ route('contact') }}"
                             class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Contact</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">About
+                    <li><a href="{{ route('about') }}"
+                            class="text-gray-400 hover:text-blue-400 transition-colors duration-300">About
                             Us</a></li>
                 </ul>
             </div>
