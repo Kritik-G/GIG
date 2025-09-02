@@ -2,7 +2,7 @@
 
 @section('content')
     <style>
-        /* Consistent with other pages */
+        /* [Original CSS remains unchanged] */
         .container-max {
             max-width: 1200px;
             margin-left: auto;
@@ -164,13 +164,11 @@
         <div class="container-max mx-auto py-24 relative z-10 text-center">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight fade-in">Our Services & Products</h1>
             <p class="text-xl md:text-2xl mb-8 text-blue-100 fade-in">
-                Discover our innovative solutions designed to empower your business with cutting-edge technology.
+                Discover our innovative solutions designed to empower your organization with smart technology.
             </p>
             <a href="#RFID" class="btn-primary fade-in">Explore Now</a>
         </div>
     </section>
-
-
 
     <!-- Services Section -->
     <section id="services" class="bg-gray-50 py-20">
@@ -178,36 +176,38 @@
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Core Services</h2>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    We offer a range of services to drive innovation and efficiency for your organization.
+                    We offer a range of services to streamline operations and enhance connectivity for your organization.
                 </p>
             </div>
             <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
                 @php
                     $services = [
                         [
-                            'icon' => '💡',
-                            'title' => 'Innovation Consulting',
-                            'desc' => 'Strategic guidance to innovate and grow.',
+                            'icon' => '📋',
+                            'title' => 'Management Tools',
+                            'desc' =>
+                                'Comprehensive tools for exams, assignments, leave, teacher, library, and vehicle management.',
                         ],
                         [
-                            'icon' => '⚡',
-                            'title' => 'Digital Transformation',
-                            'desc' => 'Modernize operations with advanced technologies.',
-                        ],
-                        [
-                            'icon' => '🤖',
-                            'title' => 'IoT Integration',
-                            'desc' => 'Connect devices and systems seamlessly.',
-                        ],
-                        [
-                            'icon' => '💻',
-                            'title' => 'Custom Software Development',
-                            'desc' => 'Tailored solutions for your unique needs.',
+                            'icon' => '📢',
+                            'title' => 'Communication & Notices',
+                            'desc' =>
+                                'Seamless communication and notice distribution for teachers, parents, and students.',
                         ],
                         [
                             'icon' => '📊',
-                            'title' => 'Data Analytics & AI',
-                            'desc' => 'Actionable insights powered by AI.',
+                            'title' => 'Analytics & Reporting',
+                            'desc' => 'Detailed analytics and report generation for data-driven insights.',
+                        ],
+                        [
+                            'icon' => '🔧',
+                            'title' => 'System Integrations',
+                            'desc' => 'Integrations for electric bell, calendar, events, and security features.',
+                        ],
+                        [
+                            'icon' => '🖨️',
+                            'title' => 'ID Card & Marksheet Generation',
+                            'desc' => 'Automated generation of printable ID cards and marksheets.',
                         ],
                     ];
                 @endphp
@@ -245,15 +245,14 @@
                         UHF RFID Attendance Solution
                     </h2>
                     <p class="text-xl md:text-2xl mb-6">
-                        Our flagship product: an accurate, automated, and scalable attendance management system for
-                        organizations of any size.
+                        A robust system for automated attendance, GPS bus tracking, and student management.
                     </p>
                     <div class="bg-white text-gray-900 rounded-xl p-6 mb-6 shadow-xl relative overflow-hidden">
                         <div class="featured-slider space-y-3 font-semibold text-lg">
-                            <div>✅ Real-time monitoring & dashboards</div>
-                            <div>✅ 99.9% Accuracy & Reliability</div>
-                            <div>✅ Analytics & Detailed Reports</div>
-                            <div>✅ Scalable for any organization</div>
+                            <div>✅ Automated UHF RFID Attendance</div>
+                            <div>✅ Real-time GPS Bus Tracking</div>
+                            <div>✅ Comprehensive Student Management</div>
+                            <div>✅ Offline Mode Support</div>
                         </div>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-4">
@@ -278,29 +277,30 @@
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Other Products</h2>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Explore our range of innovative products designed to meet your business needs.
+                    Explore our innovative products designed to enhance organizational efficiency.
                 </p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 @php
                     $products = [
                         [
-                            'icon' => '🔒',
-                            'title' => 'Secure IoT Gateway',
-                            'desc' => 'A robust platform for secure and seamless IoT device connectivity.',
-                            'route' => 'products.iot-gateway',
+                            'icon' => '📋',
+                            'title' => 'Smart Management Suite',
+                            'desc' =>
+                                'Comprehensive tools for exams, assignments, leave, teacher, and vehicle management.',
+                            'route' => 'products.management-suite',
                         ],
                         [
-                            'icon' => '📈',
-                            'title' => 'AI-Powered Analytics Suite',
-                            'desc' => 'Advanced analytics for data-driven decision-making.',
-                            'route' => 'products.analytics-suite',
+                            'icon' => '📊',
+                            'title' => 'Analytics & Reporting Platform',
+                            'desc' => 'Advanced analytics and marksheet generation for actionable insights.',
+                            'route' => 'products.analytics-platform',
                         ],
                         [
-                            'icon' => '🛠️',
-                            'title' => 'Custom ERP Solution',
-                            'desc' => 'Tailored ERP systems to streamline your business operations.',
-                            'route' => 'products.erp-solution',
+                            'icon' => '🔗',
+                            'title' => 'Integrated School System',
+                            'desc' => 'Seamless integrations for communication, notices, events, and security.',
+                            'route' => 'products.school-system',
                         ],
                     ];
                 @endphp
@@ -310,8 +310,7 @@
                         <div class="text-4xl mb-4 animate-bounce-spin">{{ $product['icon'] }}</div>
                         <h3 class="text-xl font-bold mb-2">{{ $product['title'] }}</h3>
                         <p class="text-gray-600">{{ $product['desc'] }}</p>
-                        <a href="{{ route($product['route']) }}"
-                            class="text-blue-600 font-semibold hover:text-blue-700 mt-4 inline-block">
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 mt-4 inline-block">
                             Learn More
                         </a>
                     </div>
@@ -319,7 +318,6 @@
             </div>
         </div>
     </section>
-
 
     @push('scripts')
         <script>

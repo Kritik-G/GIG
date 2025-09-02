@@ -74,18 +74,17 @@
         <div class="container-max mx-auto py-24 relative z-10 text-center">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight fade-in">Contact Us</h1>
             <p class="text-xl md:text-2xl mb-8 text-blue-100 fade-in">
-                Have questions or need help? Reach out to our team and we’ll get back to you as soon as possible.
+                Have questions about e-HAZIR or need help? Reach out to our team and we’ll get back to you promptly.
             </p>
         </div>
     </section>
-
 
     <!-- Contact Info -->
     <section class="bg-gray-50 py-20 fade-in">
         <div class="container-max mx-auto text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Contact Information</h2>
             <p class="text-gray-600 max-w-2xl mx-auto mb-8">
-                We’re here to help you. Reach out through any of the channels below.
+                Connect with GIG Innovation & Consultancy for support or inquiries about our solutions.
             </p>
             <div class="grid md:grid-cols-3 gap-8 text-center">
                 <div>
@@ -96,12 +95,23 @@
                 <div>
                     <div class="text-4xl mb-2">📞</div>
                     <p class="font-semibold">Phone</p>
-                    <p class="text-gray-600">+977 980-000-0000</p>
+                    <p class="text-gray-600">+977 9824927986<br>+977 9814099804<br>+977 9862674080</p>
                 </div>
                 <div>
                     <div class="text-4xl mb-2">✉️</div>
                     <p class="font-semibold">Email</p>
-                    <p class="text-gray-600">info@giginnovations.com</p>
+                    <p class="text-gray-600">Giginnovationconsultancy@gmail.com</p>
+                </div>
+            </div>
+            <div class="mt-8">
+                <p class="font-semibold">Follow Us</p>
+                <div class="flex justify-center gap-4 mt-2">
+                    <a href="https://facebook.com/ehazirnepal" target="_blank"
+                        class="text-blue-600 hover:text-blue-700">Facebook</a>
+                    <a href="https://instagram.com/e_hazir" target="_blank"
+                        class="text-blue-600 hover:text-blue-700">Instagram</a>
+                    <a href="https://linkedin.com/company/gig-innovation-consultancy" target="_blank"
+                        class="text-blue-600 hover:text-blue-700">LinkedIn</a>
                 </div>
             </div>
         </div>
@@ -128,9 +138,10 @@
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Find Us Here</h2>
                 <div class="w-full h-96 rounded-lg overflow-hidden shadow-lg">
                     <iframe class="w-full h-full" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.637750372927!2d85.3220!3d27.7172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190f0c0d9e01%3A0xa6e9f0ebc1b1c9c9!2sKathmandu%2C%20Nepal!5e0!3m2!1sen!2sus!4v1693620000000!5m2!1sen!2sus"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.637750372927!2d85.31912961506247!3d27.717245982789297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190f0c0d9e01%3A0xa6e9f0ebc1b1c9c9!2sKathmandu%2C%20Nepal!5e0!3m2!1sen!2snp!4v1693620000000!5m2!1sen!2snp"
                         allowfullscreen></iframe>
                 </div>
+                <!-- [Replace the iframe src with a more specific Google Maps embed URL if you have an exact address for GIG Innovation & Consultancy] -->
             </div>
         </div>
     </section>

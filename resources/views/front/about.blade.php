@@ -56,9 +56,10 @@
     <!-- Hero Section -->
     <section class="hero-gradient text-white overflow-hidden">
         <div class="container-max mx-auto py-24 relative z-10 text-center">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight fade-in">About GIG Innovations</h1>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight fade-in">About GIG Innovation &
+                Consultancy</h1>
             <p class="text-xl md:text-2xl mb-8 text-blue-100 fade-in">
-                We are committed to delivering innovative solutions that empower businesses to grow and thrive.
+                Smart Attendance, Seamless Learning with e-HAZIR!
             </p>
             <a href="{{ route('contact') }}" class="btn-primary fade-in">Get in Touch</a>
         </div>
@@ -68,8 +69,8 @@
     <section class="bg-gray-50 py-20">
         <div class="container-max mx-auto text-center fade-in">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Mission</h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">To provide cutting-edge technology solutions that
-                transform businesses, improve efficiency, and drive innovation.</p>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">To deliver cutting-edge solutions for business growth and
+                efficiency, with a strong focus on customer satisfaction and tailored innovations.</p>
         </div>
     </section>
 
@@ -77,18 +78,19 @@
     <section class="py-20">
         <div class="container-max mx-auto lg:grid lg:grid-cols-2 lg:gap-16 items-center">
             <div class="fade-in">
-                <img src="{{ asset('images/about-hero.jpg') }}" alt="Our Story" class="w-full h-auto rounded-lg shadow-2xl">
+                <img src="{{ asset('images/gig-story.jpg') }}" alt="Our Story" class="w-full h-auto rounded-lg shadow-2xl">
+                <!-- [Replace 'gig-story.jpg' with the actual image path for your company’s story image] -->
             </div>
             <div class="fade-in mt-12 lg:mt-0">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Story</h2>
                 <p class="text-gray-600 mb-4">
-                    Founded with a passion for innovation, GIG Innovations has been helping organizations embrace digital
-                    transformation, optimize operations, and achieve measurable results.
+                    Founded in 2023 in Kathmandu, Nepal, GIG Innovation & Consultancy Pvt. Ltd. was born with a vision to
+                    transform education through technology. Our flagship product, e-HAZIR, revolutionizes school operations
+                    with UHF RFID-based attendance and comprehensive management tools.
                 </p>
                 <p class="text-gray-600">
-                    Our team combines expertise in technology, strategy, and consulting to deliver solutions tailored to
-                    your
-                    unique business needs.
+                    Our team of professionals specializes in IT consulting, delivering tailored solutions for schools and
+                    businesses across education and technology.
                 </p>
             </div>
         </div>
@@ -101,24 +103,30 @@
             @php
                 $team = [
                     [
-                        'name' => 'Alice Johnson',
-                        'position' => 'CEO & Founder',
-                        'photo' => 'team1.jpg',
-                        'linkedin' => '#',
-                    ],
-                    ['name' => 'Bob Smith', 'position' => 'CTO', 'photo' => 'team2.jpg', 'linkedin' => '#'],
-                    [
-                        'name' => 'Cathy Lee',
-                        'position' => 'Head of Operations',
-                        'photo' => 'team3.jpg',
-                        'linkedin' => '#',
+                        'name' => '[Team Member 1 Name]',
+                        'position' => '[Team Member 1 Position]',
+                        'photo' => '[team-member-1-photo.jpg]',
+                        'linkedin' => '[Team Member 1 LinkedIn URL]',
                     ],
                     [
-                        'name' => 'David Kim',
-                        'position' => 'Lead Software Engineer',
-                        'photo' => 'team4.jpg',
-                        'linkedin' => '#',
+                        'name' => '[Team Member 2 Name]',
+                        'position' => '[Team Member 2 Position]',
+                        'photo' => '[team-member-2-photo.jpg]',
+                        'linkedin' => '[Team Member 2 LinkedIn URL]',
                     ],
+                    [
+                        'name' => '[Team Member 3 Name]',
+                        'position' => '[Team Member 3 Position]',
+                        'photo' => '[team-member-3-photo.jpg]',
+                        'linkedin' => '[Team Member 3 LinkedIn URL]',
+                    ],
+                    [
+                        'name' => '[Team Member 4 Name]',
+                        'position' => '[Team Member 4 Position]',
+                        'photo' => '[team-member-4-photo.jpg]',
+                        'linkedin' => '[Team Member 4 LinkedIn URL]',
+                    ],
+                    // [Add actual team member details here, including name, position, photo filename, and LinkedIn URL]
                 ];
             @endphp
             <div class="grid md:grid-cols-4 gap-8">
@@ -145,19 +153,20 @@
             @php
                 $testimonials = [
                     [
-                        'quote' => 'This company helped us revolutionize our operations!',
-                        'author' => 'Alice Johnson',
-                        'position' => 'CEO',
-                        'company' => 'TechCorp',
+                        'quote' => '["e-HAZIR transformed our school’s attendance system!"]',
+                        'author' => '[Testimonial Author 1 Name]',
+                        'position' => '[Testimonial Author 1 Position]',
+                        'company' => '[Testimonial Author 1 School/Company]',
                         'rating' => 5,
                     ],
                     [
-                        'quote' => 'Their RFID solution is highly accurate and easy to use.',
-                        'author' => 'Bob Smith',
-                        'position' => 'HR Manager',
-                        'company' => 'Global Industries',
+                        'quote' => '["Services form GIG  is seamless and reliable."]',
+                        'author' => '[Testimonial Author 2 Name]',
+                        'position' => '[Testimonial Author 2 Position]',
+                        'company' => '[Testimonial Author 2 School/Company]',
                         'rating' => 4,
                     ],
+                    // [Add actual testimonials here, including quote, author, position, and school/company name]
                 ];
             @endphp
             <div class="grid md:grid-cols-2 gap-8">
