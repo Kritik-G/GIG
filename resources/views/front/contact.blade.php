@@ -86,34 +86,49 @@
             <p class="text-gray-600 max-w-2xl mx-auto mb-8">
                 Connect with GIG Innovation & Consultancy for support or inquiries about our solutions.
             </p>
+
             <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div>
+                <!-- Location card -->
+                <div
+                    class="p-6 rounded-lg transition transform hover:scale-105 hover:shadow-lg hover:bg-blue-50 cursor-pointer">
                     <div class="text-4xl mb-2">📍</div>
                     <p class="font-semibold">Location</p>
                     <p class="text-gray-600">Kathmandu, Nepal</p>
                 </div>
-                <div>
+
+                <!-- Phone card -->
+                <div
+                    class="p-6 rounded-lg transition transform hover:scale-105 hover:shadow-lg hover:bg-green-50 cursor-pointer">
                     <div class="text-4xl mb-2">📞</div>
                     <p class="font-semibold">Phone</p>
-                    <p class="text-gray-600">+977 9824927986<br>+977 9814099804<br>+977 9862674080</p>
+                    <p class="text-gray-600">
+                        +977 9824927986<br>
+                        +977 9814099804<br>
+                        +977 9862674080
+                    </p>
                 </div>
-                <div>
+
+                <!-- Email card -->
+                <div
+                    class="p-6 rounded-lg transition transform hover:scale-105 hover:shadow-lg hover:bg-orange-50 cursor-pointer">
                     <div class="text-4xl mb-2">✉️</div>
                     <p class="font-semibold">Email</p>
                     <p class="text-gray-600">Giginnovationconsultancy@gmail.com</p>
                 </div>
             </div>
+
+
             <div class="mt-8 flex flex-col items-center">
                 <p class="font-semibold text-gray-900 mb-4">Follow Us</p>
                 <div class="flex justify-center gap-6">
-                    <a href="https://facebook.com/ehazirnepal" target="_blank"
+                    <a href="https://facebook.com/" target="_blank"
                         class="text-gray-600 hover:text-blue-600 transition-colors duration-300">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-label="Facebook">
                             <path
                                 d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2v-2c0-2.21 1.79-4 4-4h2v3h-2c-1.1 0-2 .9-2 2v2h4v3h-2v6.8c4.56-.93 8-4.96 8-9.8z" />
                         </svg>
                     </a>
-                    <a href="https://instagram.com/e_hazir" target="_blank"
+                    <a href="https://instagram.com/" target="_blank"
                         class="text-gray-600 hover:text-pink-600 transition-colors duration-300">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-label="Instagram">
                             <path
@@ -122,7 +137,7 @@
                                 d="M12 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zm0 10.16a4 4 0 110-8 4 4 0 010 8zm6.4-10.24a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" />
                         </svg>
                     </a>
-                    <a href="https://linkedin.com/company/gig-innovation-consultancy" target="_blank"
+                    <a href="https://linkedin.com/company/" target="_blank"
                         class="text-gray-600 hover:text-blue-800 transition-colors duration-300">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-label="LinkedIn">
                             <path
