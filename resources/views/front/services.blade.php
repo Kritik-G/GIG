@@ -228,8 +228,7 @@
     </section>
 
     <!-- Featured Product: UHF RFID Attendance Solution -->
-    <section id="RFID"
-        class="relative py-24 bg-gradient-to-r from-blue-700 via-indigo-600 to-purple-600 text-white overflow-hidden">
+    <section id="RFID" class="relative py-24 bg-blue-900 text-white overflow-hidden">
         <div class="container-max mx-auto relative z-10">
             <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
                 <div class="relative fade-in">
@@ -256,7 +255,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="{{ route('products.ams') }}" class="btn-primary relative group overflow-hidden">
+                        <a href="{{ route('contact') }}" class="btn-primary relative group overflow-hidden">
                             Learn More
                         </a>
                         <a href="{{ route('contact') }}" class="btn-outline">

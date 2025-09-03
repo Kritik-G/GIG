@@ -37,8 +37,7 @@
             </div>
 
             <!-- Featured e-HAZIR Service -->
-            <div
-                class="relative py-24 bg-gradient-to-r from-blue-700 via-indigo-600 to-purple-600 text-white overflow-hidden">
+            <div class="relative py-24 bg-blue-900 text-white overflow-hidden">
                 <div class="container-max mx-auto relative z-10">
                     <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
                         <div class="relative fade-in">

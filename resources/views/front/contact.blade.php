@@ -103,15 +103,32 @@
                     <p class="text-gray-600">Giginnovationconsultancy@gmail.com</p>
                 </div>
             </div>
-            <div class="mt-8">
-                <p class="font-semibold">Follow Us</p>
-                <div class="flex justify-center gap-4 mt-2">
+            <div class="mt-8 flex flex-col items-center">
+                <p class="font-semibold text-gray-900 mb-4">Follow Us</p>
+                <div class="flex justify-center gap-6">
                     <a href="https://facebook.com/ehazirnepal" target="_blank"
-                        class="text-blue-600 hover:text-blue-700">Facebook</a>
+                        class="text-gray-600 hover:text-blue-600 transition-colors duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-label="Facebook">
+                            <path
+                                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2v-2c0-2.21 1.79-4 4-4h2v3h-2c-1.1 0-2 .9-2 2v2h4v3h-2v6.8c4.56-.93 8-4.96 8-9.8z" />
+                        </svg>
+                    </a>
                     <a href="https://instagram.com/e_hazir" target="_blank"
-                        class="text-blue-600 hover:text-blue-700">Instagram</a>
+                        class="text-gray-600 hover:text-pink-600 transition-colors duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-label="Instagram">
+                            <path
+                                d="M12 2.16c3.21 0 3.58.01 4.84.07 1.17.05 1.81.24 2.23.4.56.22.96.49 1.38.91.42.42.69.82.91 1.38.16.42.35 1.06.4 2.23.06 1.26.07 1.63.07 4.84s-.01 3.58-.07 4.84c-.05 1.17-.24 1.81-.4 2.23-.22.56-.49.96-.91 1.38-.42.42-.82.69-1.38.91-.42.16-1.06.35-2.23.4-1.26.06-1.63.07-4.84.07s-3.58-.01-4.84-.07c-1.17-.05-1.81-.24-2.23-.4-.56-.22-.96-.49-1.38-.91-.42-.42-.69-.82-.91-1.38-.16-.42-.35-1.06-.4-2.23-.06-1.26-.07-1.63-.07-4.84s.01-3.58.07-4.84c.05-1.17.24-1.81.4-2.23.22-.56.49-.96.91-1.38.42-.42.82-.69 1.38-.91.42-.16 1.06-.35 2.23-.4 1.26-.06 1.63-.07 4.84-.07zm0-2.16C8.73 0 8.31.01 7.03.07c-1.3.06-2.19.27-2.97.58-.96.38-1.77.89-2.58 1.7S.38 3.9.38 4.86c-.31.78-.52 1.67-.58 2.97C-.01 8.31 0 8.73 0 12s.01 3.69.07 4.97c.06 1.3.27 2.19.58 2.97.38.96.89 1.77 1.7 2.58s1.62 1.32 2.58 1.7c.78.31 1.67.52 2.97.58 1.28.06 1.7.07 4.97.07s3.69-.01 4.97-.07c1.3-.06 2.19-.27 2.97-.58.96-.38 1.77-.89 2.58-1.7s1.32-1.62 1.7-2.58c.31-.78.52-1.67.58-2.97.06-1.28.07-1.7.07-4.97s-.01-3.69-.07-4.97c-.06-1.3-.27-2.19-.58-2.97-.38-.96-.89-1.77-1.7-2.58S20.1.38 19.14.58c-.78.31-1.67.52-2.97.58C15.69.01 15.27 0 12 0z" />
+                            <path
+                                d="M12 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zm0 10.16a4 4 0 110-8 4 4 0 010 8zm6.4-10.24a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" />
+                        </svg>
+                    </a>
                     <a href="https://linkedin.com/company/gig-innovation-consultancy" target="_blank"
-                        class="text-blue-600 hover:text-blue-700">LinkedIn</a>
+                        class="text-gray-600 hover:text-blue-800 transition-colors duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-label="LinkedIn">
+                            <path
+                                d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
