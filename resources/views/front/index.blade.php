@@ -7,10 +7,11 @@
             <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
                 <div class="fade-in">
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                        Driving Innovation & Transforming Businesses
+                        GIG Innovation & Consultancy
                     </h1>
                     <p class="text-xl md:text-2xl mb-8 text-blue-100">
-                        We help organizations implement cutting-edge solutions and embrace digital transformation.
+                        Founded in 2023 in Kathmandu, Nepal, we empower schools and businesses with innovative solutions
+                        like e-HAZIR, our RFID-based school management system.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="{{ route('contact') }}" class="btn-primary text-center">Get Consultation</a>
@@ -18,8 +19,9 @@
                     </div>
                 </div>
                 <div class="fade-in mt-12 lg:mt-0">
-                    <img src="{{ asset('images/hero-innovation.png') }}" alt="Innovation Consulting"
+                    <img src="{{ asset('images/hero-ehazir.png') }}" alt="e-HAZIR School Management"
                         class="w-full h-auto rounded-lg shadow-2xl">
+                    <!-- [Replace 'hero-ehazir.png' with the actual image path for your hero image] -->
                 </div>
             </div>
         </div>
@@ -30,11 +32,11 @@
         <div class="container-max mx-auto">
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Core Services</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">We provide a wide range of solutions to empower your
-                    business growth.</p>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">We provide innovative solutions to transform education
+                    and business operations.</p>
             </div>
 
-            <!-- Featured UHF Service -->
+            <!-- Featured e-HAZIR Service -->
             <div
                 class="relative py-24 bg-gradient-to-r from-blue-700 via-indigo-600 to-purple-600 text-white overflow-hidden">
                 <div class="container-max mx-auto relative z-10">
@@ -42,25 +44,25 @@
                         <div class="relative fade-in">
                             <div
                                 class="rounded-xl shadow-2xl overflow-hidden transform transition-transform duration-500 hover:scale-105 animate-pulse-glow">
-                                <img src="{{ asset('images/ams-dashboard.png') }}" alt="UHF RFID Attendance Management"
+                                <img src="{{ asset('images/ehazir-dashboard.png') }}" alt="e-HAZIR School Management"
                                     class="w-full h-auto">
                                 <div class="absolute top-4 right-4 text-6xl animate-bounce-spin">📡</div>
                             </div>
                         </div>
                         <div class="fade-in mt-12 lg:mt-0">
                             <h2 class="text-4xl md:text-5xl font-extrabold mb-4 animate-pulse-text">
-                                UHF RFID Attendance Solution
+                                e-HAZIR: Smart School Management
                             </h2>
                             <p class="text-xl md:text-2xl mb-6">
-                                The ultimate attendance management system: accurate, automated, and scalable for
-                                organizations of any size.
+                                Automated attendance and school management with UHF RFID, GPS tracking, and mobile apps for
+                                seamless learning.
                             </p>
                             <div class="bg-white text-gray-900 rounded-xl p-6 mb-6 shadow-xl relative overflow-hidden">
                                 <div class="featured-slider space-y-3 font-semibold text-lg">
-                                    <div>✅ Real-time monitoring & dashboards</div>
-                                    <div>✅ 99.9% Accuracy & Reliability</div>
-                                    <div>✅ Analytics & Detailed Reports</div>
-                                    <div>✅ Scalable for any organization</div>
+                                    <div>✅ Real-time RFID attendance tracking</div>
+                                    <div>✅ GPS bus tracking for parents</div>
+                                    <div>✅ Comprehensive analytics & reports</div>
+                                    <div>✅ Offline Mode Support</div>
                                 </div>
                             </div>
                             <div class="flex flex-col sm:flex-row gap-4">
@@ -81,37 +83,42 @@
                 </div>
             </div>
 
-
             <!-- Other Services -->
             <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12">
                 @php
-                    $otherServices = [
+                    $services = [
                         [
-                            'icon' => '💡',
-                            'title' => 'Innovation Consulting',
-                            'desc' => 'Strategic guidance to innovate and grow.',
+                            'icon' => '📋',
+                            'title' => 'Management Tools',
+                            'desc' =>
+                                'Comprehensive tools for exams, assignments, leave, teacher, library, and vehicle management.',
                         ],
                         [
-                            'icon' => '⚡',
-                            'title' => 'Digital Transformation',
-                            'desc' => 'Modernize operations with advanced technologies.',
+                            'icon' => '📊',
+                            'title' => 'Analytics & Reporting',
+                            'desc' => 'Detailed analytics and report generation for data-driven insights.',
                         ],
                         [
-                            'icon' => '🤖',
-                            'title' => 'IoT Integration',
-                            'desc' => 'Connect devices and systems seamlessly.',
+                            'icon' => '🖨️',
+                            'title' => 'ID Card & Marksheet Generation',
+                            'desc' => 'Automated generation of printable ID cards and marksheets.',
                         ],
                     ];
                 @endphp
-                @foreach ($otherServices as $service)
+                @foreach ($services as $service)
                     <div
                         class="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300 fade-in">
                         <div class="text-4xl mb-4 animate-bounce-spin">{{ $service['icon'] }}</div>
                         <h3 class="text-xl font-bold mb-2">{{ $service['title'] }}</h3>
                         <p class="text-gray-600">{{ $service['desc'] }}</p>
+                        <a href="{{ route('contact') }}"
+                            class="text-blue-600 font-semibold hover:text-blue-700 mt-4 inline-block">
+                            Learn More
+                        </a>
                     </div>
                 @endforeach
             </div>
+
 
             <!-- View More Button -->
             <div class="text-center mt-12 fade-in">
@@ -122,40 +129,38 @@
         </div>
     </section>
 
-
-
     <!-- Testimonials -->
     <section class="py-20 bg-white">
         <div class="container-max mx-auto">
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Success stories from organizations that
-                    transformed their
-                    operations.</p>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Success stories from schools and businesses using e-HAZIR
+                    and our services.</p>
             </div>
             @php
                 $testimonials = [
                     [
-                        'quote' => 'This company helped us revolutionize our operations!',
-                        'author' => 'Alice Johnson',
-                        'position' => 'CEO',
-                        'company' => 'TechCorp',
+                        'quote' => '["e-HAZIR transformed our school’s attendance system!"]',
+                        'author' => '[Testimonial Author 1 Name]',
+                        'position' => '[Testimonial Author 1 Position]',
+                        'company' => '[Testimonial Author 1 School/Company]',
                         'rating' => 5,
                     ],
                     [
-                        'quote' => 'Their RFID solution is highly accurate and easy to use.',
-                        'author' => 'Bob Smith',
-                        'position' => 'HR Manager',
-                        'company' => 'Global Industries',
+                        'quote' => '["The RFID solution is seamless and reliable."]',
+                        'author' => '[Testimonial Author 2 Name]',
+                        'position' => '[Testimonial Author 2 Position]',
+                        'company' => '[Testimonial Author 2 School/Company]',
                         'rating' => 4,
                     ],
                     [
-                        'quote' => 'Professional team with innovative ideas.',
-                        'author' => 'Cathy Lee',
-                        'position' => 'Operations Head',
-                        'company' => 'Smart Solutions',
+                        'quote' => '["GIG’s solutions streamlined our operations."]',
+                        'author' => '[Testimonial Author 3 Name]',
+                        'position' => '[Testimonial Author 3 Position]',
+                        'company' => '[Testimonial Author 3 School/Company]',
                         'rating' => 5,
                     ],
+                    // [Add actual testimonials here, including quote, author, position, and school/company name]
                 ];
             @endphp
             <div class="grid md:grid-cols-3 gap-8">
@@ -186,30 +191,36 @@
             <div class="text-center mb-12 fade-in">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Our team of experts drives innovation and delivers outstanding solutions for our clients.
+                    Our team of experts drives innovation with e-HAZIR and tailored solutions for our clients.
                 </p>
             </div>
             @php
                 $team = [
                     [
-                        'name' => 'Alice Johnson',
-                        'position' => 'CEO & Founder',
-                        'photo' => 'team1.jpg',
-                        'linkedin' => '#',
-                    ],
-                    ['name' => 'Bob Smith', 'position' => 'CTO', 'photo' => 'team2.jpg', 'linkedin' => '#'],
-                    [
-                        'name' => 'Cathy Lee',
-                        'position' => 'Head of Operations',
-                        'photo' => 'team3.jpg',
-                        'linkedin' => '#',
+                        'name' => '[Team Member 1 Name]',
+                        'position' => '[Team Member 1 Position]',
+                        'photo' => '[team-member-1-photo.jpg]',
+                        'linkedin' => '[Team Member 1 LinkedIn URL]',
                     ],
                     [
-                        'name' => 'David Kim',
-                        'position' => 'Lead Software Engineer',
-                        'photo' => 'team4.jpg',
-                        'linkedin' => '#',
+                        'name' => '[Team Member 2 Name]',
+                        'position' => '[Team Member 2 Position]',
+                        'photo' => '[team-member-2-photo.jpg]',
+                        'linkedin' => '[Team Member 2 LinkedIn URL]',
                     ],
+                    [
+                        'name' => '[Team Member 3 Name]',
+                        'position' => '[Team Member 3 Position]',
+                        'photo' => '[team-member-3-photo.jpg]',
+                        'linkedin' => '[Team Member 3 LinkedIn URL]',
+                    ],
+                    [
+                        'name' => '[Team Member 4 Name]',
+                        'position' => '[Team Member 4 Position]',
+                        'photo' => '[team-member-4-photo.jpg]',
+                        'linkedin' => '[Team Member 4 LinkedIn URL]',
+                    ],
+                    // [Add actual team member details here, including name, position, photo filename, and LinkedIn URL]
                 ];
             @endphp
             <div class="grid md:grid-cols-4 gap-8">
@@ -232,15 +243,16 @@
     <!-- CTA / Contact -->
     <section class="bg-blue-600 text-white py-20">
         <div class="container-max mx-auto text-center fade-in">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ignite Your Digital Revolution!</h2>
             <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Get in touch with our experts today and start your journey towards innovation and efficiency.
+                Reach out to our experts to kickstart your journey toward smarter, seamless operations!
             </p>
             <a href="{{ route('contact') }}"
                 class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all">Get
                 Free Consultation</a>
         </div>
     </section>
+
     <!-- Scripts -->
     @push('scripts')
         <script>
