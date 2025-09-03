@@ -1,10 +1,56 @@
 <style>
-    /* Navbar sticky & shadow */
+    /* Navbar */
     nav {
+        backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.85);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         transition: all 0.3s ease;
     }
 
-    /* Optional mobile fade-in effect */
+    /* Links base */
+    .nav-link {
+        position: relative;
+        font-weight: 600;
+        transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    /* Gradient underline effect */
+    .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0%;
+        height: 2px;
+        background: linear-gradient(90deg, #1e3a8a, #2563eb, #3b82f6);
+        transition: width 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: #2563eb;
+        transform: translateY(-2px);
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    /* CTA Button */
+    .cta-btn {
+        padding: 0.5rem 1.2rem;
+        background: linear-gradient(90deg, #1e3a8a, #2563eb, #3b82f6);
+        color: #fff !important;
+        border-radius: 25px;
+        font-weight: 600;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4);
+    }
+
+    /* Mobile Menu */
     #mobile-menu.fade-in {
         animation: slideDown 0.3s ease forwards;
     }
@@ -22,24 +68,30 @@
     }
 </style>
 
-<nav class="bg-white shadow-md fixed w-full z-50">
-    <div class="container-max mx-auto flex items-center justify-between py-4 px-4 lg:px-0">
+<nav class="shadow-md fixed w-full z-50">
+    <div class="w-full flex items-center justify-between py-4 px-6">
         <!-- Left: Logo -->
         <div class="flex items-center">
-            <a href="{{ route('home') }}">
-                <img src="{{ asset('images/logo.png') }}" alt="Company Logo" class="h-12">
+            <a href="{{ route('home') }}" class="flex items-center space-x-1">
+                <img src="{{ asset('images/logo.png') }}" alt="GIG Logo" class="h-12">
+                <span class="hidden md:block font-bold -ml-1">
+                    <span
+                        class="text-xl bg-gradient-to-b from-[#4DA6FF] to-[#2D3DFF] bg-clip-text text-transparent">GIG</span>
+                    <span class="text-l text-[#00CFCF]"> Innovation</span>
+                    <span class="text-l bg-gradient-to-b from-[#FF9966] to-[#FF4D33] bg-clip-text text-transparent">
+                        & Consultancy
+                    </span>
+                </span>
             </a>
         </div>
 
         <!-- Right: Navigation links -->
-        <div class="hidden lg:flex space-x-8">
-            <a href="{{ route('home') }}" class="text-gray-800 hover:text-blue-600 font-semibold transition">Home</a>
-            <a href="{{ route('services') }}"
-                class="text-gray-800 hover:text-blue-600 font-semibold transition">Services</a>
-            <a href="{{ route('about') }}" class="text-gray-800 hover:text-blue-600 font-semibold transition">About
-                Us</a>
-            <a href="{{ route('contact') }}"
-                class="text-gray-800 hover:text-blue-600 font-semibold transition">Contact</a>
+        <div class="hidden lg:flex items-center space-x-8">
+            <a href="{{ route('home') }}" class="nav-link text-gray-800">Home</a>
+            <a href="{{ route('services') }}" class="nav-link text-gray-800">Services</a>
+            <a href="{{ route('about') }}" class="nav-link text-gray-800">About Us</a>
+            <a href="{{ route('contact') }}" class="nav-link text-gray-800">Contact</a>
+            <a href="{{ route('contact') }}" class="cta-btn">Get Started</a>
         </div>
 
         <!-- Mobile Hamburger -->
@@ -56,17 +108,16 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="lg:hidden hidden bg-white shadow-md">
-        <div class="flex flex-col px-4 py-4 space-y-4">
-            <a href="{{ route('home') }}" class="text-gray-800 hover:text-blue-600 font-semibold transition">Home</a>
-            <a href="{{ route('services') }}"
-                class="text-gray-800 hover:text-blue-600 font-semibold transition">Services</a>
-            <a href="{{ route('about') }}" class="text-gray-800 hover:text-blue-600 font-semibold transition">About
-                Us</a>
-            <a href="{{ route('contact') }}"
-                class="text-gray-800 hover:text-blue-600 font-semibold transition">Contact</a>
+        <div class="flex flex-col px-6 py-4 space-y-4">
+            <a href="{{ route('home') }}" class="nav-link text-gray-800">Home</a>
+            <a href="{{ route('services') }}" class="nav-link text-gray-800">Services</a>
+            <a href="{{ route('about') }}" class="nav-link text-gray-800">About Us</a>
+            <a href="{{ route('contact') }}" class="nav-link text-gray-800">Contact</a>
+            <a href="{{ route('contact') }}" class="cta-btn text-center">Get Started</a>
         </div>
     </div>
 </nav>
+
 
 @push('scripts')
     <script>
@@ -76,7 +127,7 @@
 
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
-                mobileMenu.classList.toggle('fade-in'); // optional animation
+                mobileMenu.classList.toggle('fade-in'); // animation
             });
         });
     </script>
