@@ -1,5 +1,5 @@
 <style>
-    /* Navbar */
+    /* Navbar Base */
     nav {
         backdrop-filter: blur(12px);
         background: rgba(255, 255, 255, 0.85);
@@ -7,14 +7,18 @@
         transition: all 0.3s ease;
     }
 
-    /* Links base */
+    nav .nav-container {
+        padding: 0.75rem 1.5rem;
+        /* slimmer height */
+    }
+
+    /* Links */
     .nav-link {
         position: relative;
         font-weight: 600;
         transition: color 0.3s ease, transform 0.2s ease;
     }
 
-    /* Gradient underline effect */
     .nav-link::after {
         content: "";
         position: absolute;
@@ -31,8 +35,13 @@
         transform: translateY(-2px);
     }
 
-    .nav-link:hover::after {
+    .nav-link:hover::after,
+    .nav-link.active::after {
         width: 100%;
+    }
+
+    .nav-link.active {
+        color: #2563eb;
     }
 
     /* CTA Button */
@@ -50,7 +59,7 @@
         box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4);
     }
 
-    /* Mobile Menu */
+    /* Mobile Menu Animation */
     #mobile-menu.fade-in {
         animation: slideDown 0.3s ease forwards;
     }
@@ -69,11 +78,11 @@
 </style>
 
 <nav class="shadow-md fixed w-full z-50">
-    <div class="w-full flex items-center justify-between py-4 px-6">
+    <div class="nav-container w-full flex items-center justify-between">
         <!-- Left: Logo -->
         <div class="flex items-center">
             <a href="{{ route('home') }}" class="flex items-center space-x-1">
-                <img src="{{ asset('images/logo.png') }}" alt="GIG Logo" class="h-12">
+                <img src="{{ asset('images/logo.png') }}" alt="GIG Logo" class="h-10">
                 <span class="hidden md:block font-bold -ml-1">
                     <span
                         class="text-xl bg-gradient-to-b from-[#4DA6FF] to-[#2D3DFF] bg-clip-text text-transparent">GIG</span>
@@ -87,20 +96,23 @@
 
         <!-- Right: Navigation links -->
         <div class="hidden lg:flex items-center space-x-8">
-            <a href="{{ route('home') }}" class="nav-link text-gray-800">Home</a>
-            <a href="{{ route('services') }}" class="nav-link text-gray-800">Services</a>
-            <a href="{{ route('about') }}" class="nav-link text-gray-800">About Us</a>
-            <a href="{{ route('contact') }}" class="nav-link text-gray-800">Contact</a>
+            <a href="{{ route('home') }}"
+                class="nav-link text-gray-800 {{ request()->routeIs('home') ? 'active' : '' }}">Home</a>
+            <a href="{{ route('services') }}"
+                class="nav-link text-gray-800 {{ request()->routeIs('services') ? 'active' : '' }}">Services</a>
+            <a href="{{ route('about') }}"
+                class="nav-link text-gray-800 {{ request()->routeIs('about') ? 'active' : '' }}">About Us</a>
+            <a href="{{ route('contact') }}"
+                class="nav-link text-gray-800 {{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
             <a href="{{ route('contact') }}" class="cta-btn">Get Started</a>
         </div>
 
         <!-- Mobile Hamburger -->
         <div class="lg:hidden flex items-center">
-            <button id="mobile-menu-button" class="focus:outline-none">
+            <button id="mobile-menu-button" aria-label="Toggle mobile menu" class="focus:outline-none">
                 <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
         </div>
@@ -109,15 +121,18 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="lg:hidden hidden bg-white shadow-md">
         <div class="flex flex-col px-6 py-4 space-y-4">
-            <a href="{{ route('home') }}" class="nav-link text-gray-800">Home</a>
-            <a href="{{ route('services') }}" class="nav-link text-gray-800">Services</a>
-            <a href="{{ route('about') }}" class="nav-link text-gray-800">About Us</a>
-            <a href="{{ route('contact') }}" class="nav-link text-gray-800">Contact</a>
+            <a href="{{ route('home') }}"
+                class="nav-link text-gray-800 {{ request()->routeIs('home') ? 'active' : '' }}">Home</a>
+            <a href="{{ route('services') }}"
+                class="nav-link text-gray-800 {{ request()->routeIs('services') ? 'active' : '' }}">Services</a>
+            <a href="{{ route('about') }}"
+                class="nav-link text-gray-800 {{ request()->routeIs('about') ? 'active' : '' }}">About Us</a>
+            <a href="{{ route('contact') }}"
+                class="nav-link text-gray-800 {{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
             <a href="{{ route('contact') }}" class="cta-btn text-center">Get Started</a>
         </div>
     </div>
 </nav>
-
 
 @push('scripts')
     <script>
@@ -126,8 +141,21 @@
             const mobileMenu = document.getElementById('mobile-menu');
 
             mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                mobileMenu.classList.toggle('fade-in'); // animation
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('hidden');
+                    setTimeout(() => mobileMenu.classList.add('fade-in'), 10);
+                } else {
+                    mobileMenu.classList.remove('fade-in');
+                    setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+                }
+            });
+
+            // Close menu on link click
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('fade-in');
+                    setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+                });
             });
         });
     </script>

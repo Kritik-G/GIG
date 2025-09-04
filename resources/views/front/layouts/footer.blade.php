@@ -81,17 +81,7 @@
                     <button type="submit" class="btn-primary w-full">Send Message</button>
                 </form>
             </div>
-            <div class="fade-in">
-                <h3 class="text-2xl font-bold mb-4">Newsletter</h3>
-                <p class="text-gray-400 mb-4">Stay updated with our latest innovations and e-HAZIR updates.</p>
-                <form action="{{ route('newsletter.subscribe') }}" method="POST" class="space-y-4">
-                    @csrf
-                    <input type="email" name="email" placeholder="Enter your email"
-                        class="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
-                        required>
-                    <button type="submit" class="btn-primary w-full">Subscribe</button>
-                </form>
-            </div>
+
         </div>
         <!-- Bottom Bar -->
         <div class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-400 fade-in">

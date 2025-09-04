@@ -28,7 +28,7 @@
     @include('front.layouts.navbar')
 
     <!-- Main content -->
-    <div class="pt-20"> <!-- To offset fixed navbar height -->
+    <div class="pt-16"> <!-- To offset fixed navbar height -->
         @yield('content')
     </div>
 
