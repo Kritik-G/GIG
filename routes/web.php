@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\AdminController;
 
 // Homepage
 Route::get('/', function () {
@@ -74,3 +75,33 @@ Route::middleware(['auth'])->group(function () {
         return view('admin.dashboard');
     })->name('admin.dashboard');
 });
+
+
+
+
+// Dashboard route
+Route::get('/dashboard', function () {
+    return view('admin.dashboard'); // Dummy dashboard page
+})->name('dashboard');
+
+// Users route
+Route::get('/users', function () {
+    return view('admin.users'); // Dummy users page
+})->name('users');
+
+// Reports route
+Route::get('/reports', function () {
+    return view('admin.reports'); // Dummy reports page
+})->name('reports');
+
+// Settings route
+Route::get('/settings', function () {
+    return view('admin.settings'); // Dummy settings page
+})->name('settings');
+
+
+
+// Logout route (dummy)
+Route::get('/logout', function () {
+    return redirect()->route('home'); // Just redirect for now
+})->name('logout');
